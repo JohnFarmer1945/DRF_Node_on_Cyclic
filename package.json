@@ -1,0 +1,22 @@
+{
+  "name": "drf_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnFarmer1945/DRF_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnFarmer1945/DRF_node/issues"
+  },
+  "homepage": "https://github.com/JohnFarmer1945/DRF_node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
