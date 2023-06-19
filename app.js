@@ -1,13 +1,25 @@
 const express = require("express");
+const path = require("path");
+
+
+// Configure Server
 const app = express();
 const PORT = process.env.PORT || 3030;
 
-// your code
+app.use(express.static('public'))
+
+
+// Handler
 
 app.get('/', (req, res) => {
-	res.send('Foo bar')
+	res.sendFile(path.join(__dirname, 'public/index.html'))
 });
 
+
+
+
+
+// Start server
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
