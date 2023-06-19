@@ -63,25 +63,25 @@ class Header extends HTMLElement {
         <div class="collapse text-center navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="Team.html">Team</a>
+              <a class="nav-item nav-link fw-bold" href="team.html">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="Technik.html">Technik</a>
+              <a class="nav-item nav-link fw-bold" href="technik.html">Technik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="Umgebung.html">Umgebung</a>
+              <a class="nav-item nav-link fw-bold" href="umgebung.html">Umgebung</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="ToDos.html">ToDo's</a>
+              <a class="nav-item nav-link fw-bold" href="todos.html">ToDo's</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="MoreToDos.html">MoreToDo's</a>
+              <a class="nav-item nav-link fw-bold" href="moreToDos.html">MoreToDo's</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="Emergency_and_Procedure.html">Emergency & Procedure</a>
+              <a class="nav-item nav-link fw-bold" href="emergencyAndProcedure.html">Emergency & Procedure</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item nav-link fw-bold" href="More.html">More</a>
+              <a class="nav-item nav-link fw-bold" href="more.html">More</a>
             </li>
           </ul>
         </div>
