@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #e30613;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-nav {
+    background-color: #e30613;
+    
+}
+
+.nav-item {
+    color: white; 
+    background-color: #e30613;
+}
+
+.nav-item:hover {
+    background-color: white;
+    color: #e30613;
+}
+
+.active {
+    background-color: white;
+    
+}
+
+
+
+.my_btn_class {
+    color: white; 
+    background-color: #e30613;
+}
+
+
