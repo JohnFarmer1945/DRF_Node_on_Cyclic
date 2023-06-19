@@ -6,7 +6,6 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3030;
 
-app.use(express.static('public'))
 
 
 // Handler
@@ -17,7 +16,8 @@ app.get('/', (req, res) => {
 
 
 
-
+// Make use of public files 
+app.use(express.static('public'))
 
 // Start server
 app.listen(PORT, () => {
