@@ -63,6 +63,9 @@ class Header extends HTMLElement {
         <div class="collapse text-center navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="index.html">Start</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-item nav-link fw-bold" href="team.html">Team</a>
             </li>
             <li class="nav-item">
