@@ -6,6 +6,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3030;
 
+// Configurre Template engine
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "./views"));
 
 
 // Handler
@@ -13,6 +16,13 @@ const PORT = process.env.PORT || 3030;
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'public/index.html'))
 });
+
+// Test Handler FIRST PUG SITE
+app.get('/pug', (req, res) => {
+  res.render('test_index')
+});
+
+
 
 
 
