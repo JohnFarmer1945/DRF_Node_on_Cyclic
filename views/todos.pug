@@ -1,0 +1,51 @@
+doctype html 
+html 
+  include includes/head.pug
+
+  body  
+    // carousel header
+    include includes/header.pug
+
+    // navbar
+    <nav class="navbar navbar-expand-sm ">
+      <button class="navbar-toggler mx-auto m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse text-center navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pIndex">Start</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pTeam">Team</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pTechnik">Technik</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pUmgebung">Umgebung</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold active" href="pTodos">ToDo's</a>
+          </li> 
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pMoreToDos">MoreToDo's</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pEmergencyAndProcedure">Emergency & Procedure</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pMore">More</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content Page -->
+
+  <div class="container-fluid text-center">
+    <iframe src="https://outlook.office365.com/calendar/published/2217d18f73b049a1b0437a2d5b83ff31@drf-luftrettung.de/b22961697cf244e697e6d5cb45a061967901222792364713430/calendar.html" width="100%" height="600px">
+    </iframe>
+    <h5><a class="link-dark" target="_blank" class="link-dark" href="https://outlook.office365.com/calendar/published/2217d18f73b049a1b0437a2d5b83ff31@drf-luftrettung.de/b22961697cf244e697e6d5cb45a061967901222792364713430/calendar.html">Outlook calendar DRF Station Rendsburg</a></h5> </div>
+
+  <script src="main.js"></script>

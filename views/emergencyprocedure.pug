@@ -1,0 +1,65 @@
+doctype html 
+html 
+  include includes/head.pug
+
+  body  
+    // carousel header
+    include includes/header.pug
+
+    // navbar
+    <nav class="navbar navbar-expand-sm ">
+      <button class="navbar-toggler mx-auto m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse text-center navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pIndex">Start</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pTeam">Team</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pTechnik">Technik</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pUmgebung">Umgebung</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pTodos">ToDo's</a>
+          </li> 
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pMoreToDos">MoreToDo's</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold active" href="pEmergencyAndProcedure">Emergency & Procedure</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="pMore">More</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+
+  <!-- Main Content Page -->
+  
+  <div class="container-fluid p-2">
+    <div class="container-fluid border rounded text-center p-2">
+      <div class="container-fluid text-center p-4 ">  
+          <button onclick="randomQuestionFlight()" type="button" class="btn btn-outline-danger btn-lg">
+            Flugbetriebliches Notverfahren (Bitte klicken für Zufallsfrage)
+          </button>
+          <h2 id="flightQues" class="m-2"></h2>
+      </div>
+      <div class="container-fluid text-center p-4 ">  
+          <button onclick="randomQuestionMed()" type="button" class="btn btn-outline-danger btn-lg">
+            Medizinisches Verfahren (Bitte klicken für Zufallsfrage)
+          </button>
+          <br>
+          <h2 id="medQues" class="m-2"></h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="Emergency_and_Procedure.js"></script>
+  <script src="main.js"></script>

@@ -18,11 +18,37 @@ app.get('/', (req, res) => {
 });
 
 // Test Handler FIRST PUG SITE
-app.get('/pug', (req, res) => {
-  res.render('test_index')
+app.get('/pIndex', (req, res) => {
+  res.render('index')
 });
 
+app.get('/pTeam', (req, res) => {
+  res.render('team')
+});
 
+app.get('/pTechnik', (req, res) => {
+  res.render('technik')
+});
+
+app.get('/pUmgebung', (req, res) => {
+  res.render('umgebung')
+});
+
+app.get('/pTodos', (req, res) => {
+  res.render('todos')
+});
+
+app.get('/pMoreToDos', (req, res) => {
+  res.render('moretodos')
+});
+
+app.get('/pEmergencyAndProcedure', (req, res) => {
+  res.render('emergencyprocedure')
+});
+
+app.get('/pMore', (req, res) => {
+  res.render('more')
+});
 
 
 
