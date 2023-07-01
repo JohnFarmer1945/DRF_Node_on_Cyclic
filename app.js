@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "./views"));
 // Handler
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public/index.html'))
+	res.render(path.join(__dirname, '/views/index'))
 });
 
 // Test Handler FIRST PUG SITE
