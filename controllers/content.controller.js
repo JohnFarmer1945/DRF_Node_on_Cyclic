@@ -1,45 +1,42 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
 // define the home page route
-router.get('/', (req, res) => {
-    res.render('index')
-})
-
+router.get("/", (req, res) => {
+  res.render("index");
+});
 
 // DEFINE CONTEXT PAGES
-router.get('/pIndex', (req, res) => {
-    res.render('index')
-  });
-
-router.get('/pTeam', (req, res) => {
-  res.render('team')
+router.get("/pIndex", (req, res) => {
+  res.render("index");
 });
 
-router.get('/pTechnik', (req, res) => {
-  res.render('technik')
+router.get("/pTeam", (req, res) => {
+  res.render("../team");
 });
 
-router.get('/pUmgebung', (req, res) => {
-  res.render('umgebung')
+router.get("/pTechnik", (req, res) => {
+  res.render("technik");
 });
 
-router.get('/pTodos', (req, res) => {
-  res.render('todos')
+router.get("/pUmgebung", (req, res) => {
+  res.render("umgebung");
 });
 
-router.get('/pMoreToDos', (req, res) => {
-  res.render('moretodos')
+router.get("/pTodos", (req, res) => {
+  res.render("todos");
 });
 
-router.get('/pEmergencyAndProcedure', (req, res) => {
-  res.render('emergencyprocedure')
+router.get("/pMoreToDos", (req, res) => {
+  res.render("moretodos");
 });
 
-router.get('/pMore', (req, res) => {
-  res.render('more')
+router.get("/pEmergencyAndProcedure", (req, res) => {
+  res.render("emergencyprocedure");
 });
 
-
+router.get("/pMore", (req, res) => {
+  res.render("more");
+});
 
 module.exports = router;
