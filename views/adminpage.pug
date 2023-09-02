@@ -1,0 +1,83 @@
+doctype html 
+html 
+  include includes/head.pug
+
+  body  
+    <!-- carousel header -->
+    include includes/header.pug
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm ">
+      <button class="navbar-toggler mx-auto m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse text-center navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="Start">Start</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="Team">Team</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="Technik">Technik</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="Umgebung">Umgebung</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="Todos">ToDo's</a>
+          </li> 
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="MoreToDos">MoreToDo's</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="EmergencyAndProcedure">Emergency & Procedure</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-item nav-link fw-bold" href="More">More</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+
+  
+  <!-- Main Content Page -->
+  
+  <div class="container-fluid p-2">
+    <div class="container-fluid border rounded text-center p-2">
+        <h2>ADMIN PAGE</h2>
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <script src="Emergency_and_Procedure.js"></script>
+  <script src="main.js"></script>
