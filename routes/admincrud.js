@@ -6,6 +6,7 @@ const emergencyFlightModel = require('../models/emergencyProcedures')
 router.get("/", async (request, response) => {
   const emergencyFlightModelRes = await emergencyFlightModel.find({});
   console.log (emergencyFlightModelRes);
+  response.render("../views/adminpage");
 });
 
 
