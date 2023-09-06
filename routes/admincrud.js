@@ -28,8 +28,9 @@ router.get("/", async (request, response) => {
 router.get('/delete/:id', deleteAction);
 
 async function deleteAction (request, response) {
+  
   const MongoIDFromURLLessDollar = request.params.id.slice(1);
-  console.log(`request.params.id: ${MongoIDFromURLLessDollar}`)
+  
   try {
     const questionToBeDeleted = await emergencyFlightModel.findByIdAndDelete(MongoIDFromURLLessDollar);
     response.redirect("/admin");

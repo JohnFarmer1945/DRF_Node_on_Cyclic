@@ -57,10 +57,18 @@ html
                                 tr
                                     td #{question.id}
                                     td #{question.name}
-                                    td 
-                                        <a href="/admin/delete/$#{question.mongo_id}"> DELTEST </a>
-                                        //a(href="/admin/delete/${question.mongo_id}") Delete
                                     td  
+                                        <form action="/action_page.php">
+                                            <input type="text" name="name" value=#{question.name}>
+                                            <input type="submit" value="edit">
+                                        </form> 
+                                    td 
+                                        button
+                                            <a href="/admin/delete/$#{question.mongo_id}"> delete </a>
+                                            
+                                        
+
+                                        
                                         
                 </div>
         </div>
