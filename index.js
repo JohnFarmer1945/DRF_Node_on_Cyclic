@@ -23,7 +23,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Test connect to your Atlas cluster
 // Replace the following with your Atlas connection string                                                                                                                                        
 
-const uri = process.env.DATABASE
+//const uri = process.env.DATABASE
+const uri = ${{ secrets.DATABASE }}
+
 
 const connectToDB = async () => {
   try {
