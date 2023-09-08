@@ -1,9 +1,11 @@
+const dotenv = require ('dotenv');
+dotenv.config()
+
 // Allgmeine Module
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser")
 
-const dotenv = require ('dotenv');
 const mongoose = require('mongoose');
 
 // Import ownn modules
@@ -20,12 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Test connect to your Atlas cluster
 // Replace the following with your Atlas connection string                                                                                                                                        
-const uri = "mongodb+srv://johnfarmer:blgofhPFrOwu9N4M@cluster0.lp7kfys.mongodb.net/?retryWrites=true&w=majority";
-
-
-dotenv.config()
-
-const connectionString = process.env.DB_STRING
+// const uri = "mongodb+srv://johnfarmer:blgofhPFrOwu9N4M@cluster0.lp7kfys.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.DATABASE
 
 const connectToDB = async () => {
   try {

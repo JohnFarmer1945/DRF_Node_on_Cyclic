@@ -1,2 +1,8 @@
+// env variables
+.env
+
+// Node Modules
 **node_modules**
+
+// to-do list
 todo_list
