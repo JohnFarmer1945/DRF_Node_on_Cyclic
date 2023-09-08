@@ -56,6 +56,7 @@ app.use("/", RouterStaticFiles);
 app.use("/admin", RouterAdmin);
 
 // Start server
+connectToDB();
 console.log(''); 
 console.log('********** STARTING SERVER **********');
 
@@ -64,4 +65,4 @@ app.listen(PORT, () => {
 });
 
 // Testconnect to database
-connectToDB();
+
