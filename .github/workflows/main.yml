@@ -1,0 +1,3 @@
+steps:  
+    env: # Or as an environment variable
+      databaset: ${{ secrets.database }}
