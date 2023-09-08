@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Test connect to your Atlas cluster
 // Replace the following with your Atlas connection string                                                                                                                                        
-// const uri = "mongodb+srv://johnfarmer:blgofhPFrOwu9N4M@cluster0.lp7kfys.mongodb.net/?retryWrites=true&w=majority";
+
 const uri = process.env.DATABASE
 
 const connectToDB = async () => {
