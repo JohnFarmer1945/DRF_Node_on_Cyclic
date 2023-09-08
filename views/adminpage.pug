@@ -46,26 +46,36 @@ html
     <div class="container-fluid p-2">
         <div class="container-fluid border rounded text-center p-2 justify-content-center">  
                 <div class="container">
-                    table(class='table w-auto') 
+                    table(class='table w-auto h-auto') 
                         thead 
                             tr  
-                                th Id
-                                th name
-                                th action 
+                                th ID
+                                th Name
+                                th 
+                                th
+                                 
                         tbody   
                             each question in emergencyFlightModelResReduced
                                 tr
                                     td #{question.id}
-                                    td #{question.name}
+                                    
                                     td  
                                         <form action="/action_page.php">
                                             <input type="text" name="name" value=#{question.name}>
-                                            <input type="submit" value="edit">
+                                            <button class="btn"><i class="fa fa-pen"></i> Edit</button> 
+                                                
                                         </form> 
                                     td 
-                                        button
-                                            <a href="/admin/delete/$#{question.mongo_id}"> delete </a>
-                                            
+                                        <a ref="/admin/delete/$#{question.mongo_id}"> <button class="btn"><i class="fa fa-trash"></i> Edit</button></a>
+                                    
+                            tr  
+                                td  
+                                    <form action="/action_page.php">
+                                        <input type="text" name="name" value="new value">
+                                        button 
+                                            <input type="submit" value="edit">
+                                    </form> 
+                            
                                         
 
                                         
