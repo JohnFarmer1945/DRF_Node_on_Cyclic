@@ -44,10 +44,11 @@ html
   
   <!-- Main Content Page -->
     <div class="container-fluid p-2">
-        <div class="container-fluid border rounded text-center p-2 justify-content-center">  
+        <div class="container-fluid border rounded text-left p-2 ">  
                 <div class="container">
-                    table(class='table w-auto h-auto') 
-                        thead 
+                    <h1> Fligth Emergencies </h1>
+                    table(class='table w-auto h-auto justify-content-center align-middle table-striped ') 
+                        thead(class="table-dark") 
                             tr  
                                 th ID
                                 th Name
@@ -58,23 +59,25 @@ html
                             each question in emergencyFlightModelResReduced
                                 tr
                                     td #{question.id}
-                                    
                                     td  
                                         <form action="/action_page.php">
                                             <input type="text" name="name" value=#{question.name}>
-                                            <button class="btn"><i class="fa fa-pen"></i> Edit</button> 
-                                                
+                                            <button class="btn"><i class="fa fa-pen"></i> Edit</button>     
                                         </form> 
                                     td 
                                         <a ref="/admin/delete/$#{question.mongo_id}"> <button class="btn"><i class="fa fa-trash"></i> Edit</button></a>
+                                    td
                                     
-                            tr  
-                                td  
+                            tr(justify-content-right)
+                                td
+                                td(colspan="3")
                                     <form action="/action_page.php">
-                                        <input type="text" name="name" value="new value">
-                                        button 
-                                            <input type="submit" value="edit">
+                                        <input type="text" name="name" value="Neue Frage">
+                                        <button class="btn"><i class="fa fa-plus"></i> Insert</button> 
                                     </form> 
+                                td 
+                                td 
+                                
                             
                                         
 
