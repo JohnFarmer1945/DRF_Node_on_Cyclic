@@ -3,6 +3,7 @@ var router = express.Router();
 const emergencyFlightModel = require('../models/emergencyProcedures')
 
 // Admin Routes
+// Route Database Read All
 router.get("/", async (request, response) => {
   const emergencyFlightModelRes = await emergencyFlightModel.find({});
   emergencyFlightModelResReduced = [];
@@ -19,12 +20,29 @@ router.get("/", async (request, response) => {
     );
     counter +=1
   }
-  console.log(emergencyFlightModelResReduced);
+
   
   response.render("../views/adminpage", {  emergencyFlightModelResReduced : emergencyFlightModelResReduced  });
 });
 
+// Route Database Create
 
+router.post('/create', createAction);
+
+async function createAction (request, response) {
+  const { name } = request.body; 
+  try {
+    const new_emergencyFlightModel = new emergencyFlightModel({  name  })
+    await new_emergencyFlightModel.save(); 
+    response.redirect("/admin");
+  } catch (error) {
+    response.status(500).send(error);
+  }
+}
+
+
+
+// Route Database Delete
 router.get('/delete/:id', deleteAction);
 
 async function deleteAction (request, response) {
@@ -33,7 +51,7 @@ async function deleteAction (request, response) {
   
   try {
     const questionToBeDeleted = await emergencyFlightModel.findByIdAndDelete(MongoIDFromURLLessDollar);
-    response.redirect("/admin");
+    response.redirect("/");
     if (!questionToBeDeleted) response.status(404).send("No item found");
     response.status(200).send();
   } catch (error) {
