@@ -60,22 +60,23 @@ html
                                 tr
                                     td #{question.id}
                                     td  
-                                        <form action="admin/create" method="post">
-                                            <input type="text" name="name" value=#{question.name}>
+                                        <form action="admin/update" method="post">
+                                            <input type="text" name="name" value="#{question.name}">
+                                            <input type="hidden" name="mongo_id" value=#{question.mongo_id}>
                                             <button class="btn"><i class="fa fa-pen"></i> Edit</button>     
                                         </form> 
                                     td 
                                         <a href="/admin/delete/$#{question.mongo_id}">
                                             <button class="btn"><i class="fa fa-trash"></i> Delete</button>
                                         </a>
-                                    td
+                                    td 
                                     
                             tr(justify-content-right)
                                 td
                                 td(colspan="3")
                                     <form action="admin/create" method="post">
                                         <input type="text" name="name" value="">
-                                        <button class="btn"><i class="fa fa-plus"></i> Create</button> 
+                                        <button class="btn"><i class="fa fa-plus"></i> Create new question</button> 
                                     </form> 
                                 
                             

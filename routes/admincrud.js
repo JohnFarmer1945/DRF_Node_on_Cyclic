@@ -6,6 +6,7 @@ const emergencyFlightModel = require('../models/emergencyProcedures')
 // Route Database Read All
 router.get("/", async (request, response) => {
   const emergencyFlightModelRes = await emergencyFlightModel.find({});
+  console.log(emergencyFlightModelRes); 
   emergencyFlightModelResReduced = [];
   counter = 1;
 
@@ -25,8 +26,8 @@ router.get("/", async (request, response) => {
   response.render("../views/adminpage", {  emergencyFlightModelResReduced : emergencyFlightModelResReduced  });
 });
 
-// Route Database Create
 
+// Route Database Create
 router.post('/create', createAction);
 
 async function createAction (request, response) {
@@ -41,9 +42,9 @@ async function createAction (request, response) {
 }
 
 
-
 // Route Database Delete
 router.get('/delete/:id', deleteAction);
+
 async function deleteAction (request, response) {
   const MongoIDFromURLLessDollar = request.params.id.slice(1);
   console.log(MongoIDFromURLLessDollar);
@@ -54,6 +55,20 @@ async function deleteAction (request, response) {
     response.status(200).send();
   } catch (error) {
     response.status(500).send(error);
+  }
+}
+
+// Route Database Update
+router.post('/update', updateAction)
+
+
+async function updateAction (request, response) {
+  const { name, mongo_id } = request.body; 
+  try {
+    await emergencyFlightModel.findByIdAndUpdate(mongo_id, { name }, { new: true });
+    response.redirect("/admin");
+  } catch (error) {
+    response.status(500).send(error); 
   }
 }
 
