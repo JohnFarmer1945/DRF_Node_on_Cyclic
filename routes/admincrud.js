@@ -44,14 +44,12 @@ async function createAction (request, response) {
 
 // Route Database Delete
 router.get('/delete/:id', deleteAction);
-
 async function deleteAction (request, response) {
-  
   const MongoIDFromURLLessDollar = request.params.id.slice(1);
-  
+  console.log(MongoIDFromURLLessDollar);
   try {
     const questionToBeDeleted = await emergencyFlightModel.findByIdAndDelete(MongoIDFromURLLessDollar);
-    response.redirect("/");
+    response.redirect("/admin");
     if (!questionToBeDeleted) response.status(404).send("No item found");
     response.status(200).send();
   } catch (error) {

@@ -65,7 +65,9 @@ html
                                             <button class="btn"><i class="fa fa-pen"></i> Edit</button>     
                                         </form> 
                                     td 
-                                        <a ref="/admin/delete/$#{question.mongo_id}"> <button class="btn"><i class="fa fa-trash"></i> Delete</button></a>
+                                        <a href="/admin/delete/$#{question.mongo_id}">
+                                            <button class="btn"><i class="fa fa-trash"></i> Delete</button>
+                                        </a>
                                     td
                                     
                             tr(justify-content-right)
